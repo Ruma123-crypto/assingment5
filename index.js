@@ -52,6 +52,17 @@ const previousElement=document.getElementById('history-content')
    
 }
 
+//copy count function
+function totalcopy(id){
+    const countCopyE1=document.getElementById('copy-text')
+    const currentCopy=parseInt(countCopyE1.innerText)
+    const neWCount=currentCopy+1;
+    countCopyE1.innerText=neWCount
+     const serviceNumber=document.getElementById(id).innerText
+     navigator.clipboard.writeText(serviceNumber)
+    alert("Copied: "+serviceNumber)
+}
+
 
 // heart click code
 
@@ -157,4 +168,50 @@ document.getElementById('railway-call').addEventListener('click',function(){
 document.getElementById('clear-button').addEventListener('click',function(){
 const historyDiv=document.getElementById('history-content')
 historyDiv.innerHTML='';
+})
+
+
+
+
+
+
+
+
+// copy icon er task
+
+document.getElementById('national-copy-icon').addEventListener('click',function(){
+    totalcopy('national-service-num')
+
+})
+document.getElementById('police-copy-icon').addEventListener('click',function(){
+    totalcopy('police-service-num')
+
+})
+document.getElementById('fire-copy-icon').addEventListener('click',function(){
+    totalcopy('fire-service-num')
+
+})
+document.getElementById('ambulance-copy-icon').addEventListener('click',function(){
+    totalcopy('ambulance-service-num')
+
+})
+document.getElementById('Women-child-copy').addEventListener('click',function(){
+    totalcopy('Women-child-num')
+
+})
+document.getElementById('helpline-copy-icon').addEventListener('click',function(){
+    totalcopy('helpline-service-num')
+
+})
+document.getElementById('electricity-copy-icon').addEventListener('click',function(){
+    totalcopy('electricity-num')
+
+})
+document.getElementById('brac-copy-icon').addEventListener('click',function(){
+    totalcopy('brac-num')
+
+})
+document.getElementById('railway-copy-icon').addEventListener('click',function(){
+    totalcopy('railway-num')
+
 })
